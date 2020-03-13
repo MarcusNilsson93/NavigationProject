@@ -29,7 +29,6 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
         mapView.setCenter(CLLocationCoordinate2D(latitude: 59.31, longitude: 18.06), zoomLevel: 9, animated: false)
         
         view.addSubview(mapView)
-        
         mapView.delegate = self
         
         mapView.showsUserLocation = true
@@ -90,6 +89,7 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
         let annotation = MGLPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = "Start navigation"
+        //Fixa subtitle from Api
         mapView.addAnnotation(annotation)
         calculateRoute(from: (mapView.userLocation!.coordinate), to: annotation.coordinate) { (route, error) in
             if error != nil {
@@ -109,9 +109,8 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
         present(searchController, animated: true, completion: nil)
+
     }
-    
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
         mapView.setUserTrackingMode(.none, animated: true, completionHandler: nil)
@@ -144,6 +143,7 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
                 
                 if error != nil{
                     //Error handeling
+                    
                 }
                 else{
                     print(response ?? "Somting went wrong")
@@ -153,7 +153,6 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
                         let anotations = self.mapView.annotations
                         self.mapView.removeAnnotations(anotations!)
                     }
-                    
                     // Getting Data
                     let latitude = response?.boundingRegion.center.latitude
                     let longitude = response?.boundingRegion.center.longitude

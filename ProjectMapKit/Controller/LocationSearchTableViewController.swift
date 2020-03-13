@@ -37,10 +37,10 @@ class LocationSearchTableViewController: UITableViewController, MGLMapViewDelega
         return 0
     }
 
-    /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
-    }*/
+    }
 
    
 
@@ -68,7 +68,7 @@ extension LocationSearchTableViewController: UISearchResultsUpdating{
         
     }
 }
-extension LocationSearchTableViewController {
+/*extension LocationSearchTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matchingItems.count
     }
@@ -80,6 +80,6 @@ extension LocationSearchTableViewController {
         cell.detailTextLabel?.text = ""
         return cell
     }
-}
+}*/
 
 

@@ -13,6 +13,8 @@
 		2C5FAD9E24067B12005629D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FAD9C24067B12005629D1 /* Main.storyboard */; };
 		2C5FADA024067B17005629D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FAD9F24067B17005629D1 /* Assets.xcassets */; };
 		2C5FADA324067B17005629D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FADA124067B17005629D1 /* LaunchScreen.storyboard */; };
+		2C789B14241BEBDC002E2091 /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C789B13241BEBDC002E2091 /* AnimationsViewController.swift */; };
+		2CA20269241B86450085C8EB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CA20267241B86450085C8EB /* Model.xcdatamodeld */; };
 		2CE016D4240C0CA40095A356 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE016D3240C0CA40095A356 /* LocationSearchTableViewController.swift */; };
 		2CE2EF202416413E00A9D8E0 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE2EF1F2416413E00A9D8E0 /* MapboxMobileEvents.framework */; };
 		575140F0DE1CE562FD6FF0D5 /* Pods_ProjectMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B35F5A7F0A498019597A982 /* Pods_ProjectMapKit.framework */; };
@@ -28,6 +30,8 @@
 		2C5FAD9F24067B17005629D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C5FADA224067B17005629D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C5FADA424067B17005629D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C789B13241BEBDC002E2091 /* AnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimationsViewController.swift; path = /Users/marcus/Documents/AppleDev/mapKit/NavigationProject/ProjectMapKit/Controller/AnimationsViewController.swift; sourceTree = "<absolute>"; };
+		2CA20268241B86450085C8EB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		2CE016D3240C0CA40095A356 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewController.swift; sourceTree = "<group>"; };
 		2CE2EF1F2416413E00A9D8E0 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B35F5A7F0A498019597A982 /* Pods_ProjectMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +55,7 @@
 		2C2643802407DBD7005AA15F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2CA20267241B86450085C8EB /* Model.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -67,6 +72,7 @@
 		2C2643822407DC03005AA15F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2C789B13241BEBDC002E2091 /* AnimationsViewController.swift */,
 				2CE016D3240C0CA40095A356 /* LocationSearchTableViewController.swift */,
 				2C5FAD9A24067B12005629D1 /* ViewController.swift */,
 			);
@@ -249,6 +255,8 @@
 			files = (
 				2CE016D4240C0CA40095A356 /* LocationSearchTableViewController.swift in Sources */,
 				2C5FAD9B24067B12005629D1 /* ViewController.swift in Sources */,
+				2CA20269241B86450085C8EB /* Model.xcdatamodeld in Sources */,
+				2C789B14241BEBDC002E2091 /* AnimationsViewController.swift in Sources */,
 				2C5FAD9724067B12005629D1 /* AppDelegate.swift in Sources */,
 				2C5FAD9924067B12005629D1 /* SceneDelegate.swift in Sources */,
 			);
@@ -450,6 +458,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2CA20267241B86450085C8EB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2CA20268241B86450085C8EB /* Model.xcdatamodel */,
+			);
+			currentVersion = 2CA20268241B86450085C8EB /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2C5FAD8B24067B12005629D1 /* Project object */;
 }

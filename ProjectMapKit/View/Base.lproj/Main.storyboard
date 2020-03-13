@@ -7,6 +7,53 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Animations View Controller-->
+        <scene sceneID="PQc-5m-TWo">
+            <objects>
+                <viewController id="B08-JV-jU2" customClass="AnimationsViewController" customModule="ProjectMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ll1-DM-vY7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="NavigationApp" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGw-gq-4Qp">
+                                <rect key="frame" x="72" y="416" width="270" height="68"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="noC-M7-ibn"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenMapPin" translatesAutoresizingMaskIntoConstraints="NO" id="690-I1-oFA">
+                                <rect key="frame" x="127" y="212" width="160" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="E0l-Y5-pEQ"/>
+                                    <constraint firstAttribute="width" constant="160" id="THq-oV-NEC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="690-I1-oFA" firstAttribute="leading" secondItem="plY-BS-DN5" secondAttribute="leading" constant="127" id="1zD-kP-U19"/>
+                            <constraint firstItem="mGw-gq-4Qp" firstAttribute="top" secondItem="690-I1-oFA" secondAttribute="bottom" constant="79" id="8Ab-tC-EfA"/>
+                            <constraint firstItem="mGw-gq-4Qp" firstAttribute="top" secondItem="690-I1-oFA" secondAttribute="bottom" constant="79" id="HVp-VD-tcx"/>
+                            <constraint firstItem="mGw-gq-4Qp" firstAttribute="leading" secondItem="plY-BS-DN5" secondAttribute="leading" constant="72" id="JdE-gp-N6w"/>
+                            <constraint firstItem="plY-BS-DN5" firstAttribute="trailing" secondItem="690-I1-oFA" secondAttribute="trailing" constant="127" id="LXT-VH-Ri2"/>
+                            <constraint firstItem="plY-BS-DN5" firstAttribute="trailing" secondItem="mGw-gq-4Qp" secondAttribute="trailing" constant="72" id="Llx-Zm-WED"/>
+                            <constraint firstItem="690-I1-oFA" firstAttribute="top" secondItem="plY-BS-DN5" secondAttribute="top" constant="168" id="Tpd-3A-7yR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="plY-BS-DN5"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationPin" destination="690-I1-oFA" id="Hne-qq-kgw"/>
+                        <outlet property="animationTitle" destination="mGw-gq-4Qp" id="5X6-gE-kpE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nSk-KL-NPn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771.01449275362324" y="-292.63392857142856"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -27,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914" y="73"/>
+            <point key="canvasLocation" x="1561" y="-58"/>
         </scene>
         <!--Location Search Table View Controller-->
         <scene sceneID="iK8-wO-Qj8">
@@ -71,7 +118,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHg-6P-kcj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1802.8985507246377" y="78.348214285714278"/>
+            <point key="canvasLocation" x="2280" y="-504"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ONO-qQ-VVp">
@@ -89,10 +136,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2Y-Lq-9Zd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="72.991071428571431"/>
+            <point key="canvasLocation" x="-161" y="82"/>
         </scene>
     </scenes>
     <resources>
+        <image name="LaunchScreenMapPin" width="29.5" height="44"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
     </resources>
 </document>
