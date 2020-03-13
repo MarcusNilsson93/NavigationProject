@@ -19,10 +19,20 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
     var directionRoute: Route?
     var PolyLineStyle: NSExpression!
     var resultSearchController: UISearchController? = nil
+    var coreDataButton: UIButton!
     
+    @IBOutlet weak var coreData: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //shows NavigationBar
+        self.navigationController?.isNavigationBarHidden = false
+        //Removes backButton to previus VC
+        self.navigationItem.setHidesBackButton(true, animated: true);
+        self.navigationItem.rightBarButtonItems?.append(coreData)
+        
+        
+        
         //creates a MapView
         mapView = NavigationMapView(frame: view.bounds)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -112,6 +122,14 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
+        
+        let searched = Searched(context: persistenceService.context)
+        searched.cityName = searchBar.text
+        persistenceService.saveContext()
+        let tableView = TableViewController.init()
+        tableView.lastSearchedCitys.append(searched)
+        tableView.tableView.reloadData()
+        
         mapView.setUserTrackingMode(.none, animated: true, completionHandler: nil)
         var interactions = UIView.accessibilityRespondsToUserInteraction()
         interactions = false
@@ -171,3 +189,4 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
         }
     }
 }
+
