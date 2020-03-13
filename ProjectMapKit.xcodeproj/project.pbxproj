@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C28333A2412445800E7B98F /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2833392412445800E7B98F /* MapboxMobileEvents.framework */; };
 		2C5FAD9724067B12005629D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FAD9624067B12005629D1 /* AppDelegate.swift */; };
 		2C5FAD9924067B12005629D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FAD9824067B12005629D1 /* SceneDelegate.swift */; };
 		2C5FAD9B24067B12005629D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FAD9A24067B12005629D1 /* ViewController.swift */; };
@@ -15,6 +14,7 @@
 		2C5FADA024067B17005629D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FAD9F24067B17005629D1 /* Assets.xcassets */; };
 		2C5FADA324067B17005629D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FADA124067B17005629D1 /* LaunchScreen.storyboard */; };
 		2CE016D4240C0CA40095A356 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE016D3240C0CA40095A356 /* LocationSearchTableViewController.swift */; };
+		2CE2EF202416413E00A9D8E0 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE2EF1F2416413E00A9D8E0 /* MapboxMobileEvents.framework */; };
 		575140F0DE1CE562FD6FF0D5 /* Pods_ProjectMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B35F5A7F0A498019597A982 /* Pods_ProjectMapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +29,7 @@
 		2C5FADA224067B17005629D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C5FADA424067B17005629D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CE016D3240C0CA40095A356 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewController.swift; sourceTree = "<group>"; };
+		2CE2EF1F2416413E00A9D8E0 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B35F5A7F0A498019597A982 /* Pods_ProjectMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC792EF18503540849C21CC /* Pods-ProjectMapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectMapKit.debug.xcconfig"; path = "Target Support Files/Pods-ProjectMapKit/Pods-ProjectMapKit.debug.xcconfig"; sourceTree = "<group>"; };
 		FF040CBE078B6142178FB151 /* Pods-ProjectMapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectMapKit.release.xcconfig"; path = "Target Support Files/Pods-ProjectMapKit/Pods-ProjectMapKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -39,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C28333A2412445800E7B98F /* MapboxMobileEvents.framework in Frameworks */,
+				2CE2EF202416413E00A9D8E0 /* MapboxMobileEvents.framework in Frameworks */,
 				575140F0DE1CE562FD6FF0D5 /* Pods_ProjectMapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,12 +94,12 @@
 		2C5FAD9524067B12005629D1 /* ProjectMapKit */ = {
 			isa = PBXGroup;
 			children = (
-				2C5FADA424067B17005629D1 /* Info.plist */,
 				2CE016D5240CFBC70095A356 /* Suporting files */,
 				2C2643802407DBD7005AA15F /* Models */,
 				2C2643812407DBE7005AA15F /* View */,
 				2C2643822407DC03005AA15F /* Controller */,
 				2C5FAD9F24067B17005629D1 /* Assets.xcassets */,
+				2C5FADA424067B17005629D1 /* Info.plist */,
 			);
 			path = ProjectMapKit;
 			sourceTree = "<group>";
@@ -124,6 +125,7 @@
 		748D872AD34A0816D47EB794 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CE2EF1F2416413E00A9D8E0 /* MapboxMobileEvents.framework */,
 				2C2833392412445800E7B98F /* MapboxMobileEvents.framework */,
 				7B35F5A7F0A498019597A982 /* Pods_ProjectMapKit.framework */,
 			);
