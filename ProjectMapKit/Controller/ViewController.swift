@@ -89,11 +89,10 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
         let annotation = MGLPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = "Start navigation"
-        //Fixa subtitle from Api
         mapView.addAnnotation(annotation)
         calculateRoute(from: (mapView.userLocation!.coordinate), to: annotation.coordinate) { (route, error) in
             if error != nil {
-                print("Error calculating route")
+                Alert.errorCalculatingRouteAlert(vc: self)
             }
         }
     }
@@ -142,7 +141,7 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
                 activityIndicator.stopAnimating()
                 
                 if error != nil{
-                    //Error handeling
+                    Alert.errorPlacingPinAlert(vc: self)
                     
                 }
                 else{
@@ -164,7 +163,7 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
                     self.mapView.addAnnotation(annotation)
                     self.calculateRoute(from: (self.mapView.userLocation!.coordinate), to: annotation.coordinate) { (route, error) in
                         if error != nil {
-                            print("Error calculating route")
+                            Alert.errorPlacingPinAlert(vc: self)
                         }
                     }
                 }

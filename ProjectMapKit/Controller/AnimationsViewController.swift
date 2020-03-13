@@ -11,21 +11,31 @@ class AnimationsViewController: UIViewController {
     @IBOutlet weak var animationPin: UIImageView!
     @IBOutlet weak var animationTitle: UITextField!
     
+    var animator: UIDynamicAnimator!
+    var gravity: UIDynamicBehavior!
+    var collision: UICollisionBehavior!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //Hides navigationbar
+        self.navigationController?.isNavigationBarHidden = true
+        //Start the animations
+        animations()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func animations(){
+        animator = UIDynamicAnimator(referenceView: self.view)
+        gravity = UIGravityBehavior(items: [animationPin])
+        animator.addBehavior(gravity)
+        
+        collision = UICollisionBehavior(items: [animationPin])
+        collision.translatesReferenceBoundsIntoBoundary = true
+        animator.addBehavior(collision)
+        
+        UIView.animate(withDuration: 2.0, animations: {
+            self.animationTitle.transform = CGAffineTransform(translationX: 700, y: 0)
+        }) { (_) in
+            self.performSegue(withIdentifier: "toViewController", sender: Any?.self)
+        }
     }
-    */
-
 }

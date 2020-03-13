@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="NavigationApp" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGw-gq-4Qp">
-                                <rect key="frame" x="72" y="416" width="270" height="68"/>
+                                <rect key="frame" x="72" y="460" width="270" height="68"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="noC-M7-ibn"/>
@@ -26,7 +26,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenMapPin" translatesAutoresizingMaskIntoConstraints="NO" id="690-I1-oFA">
-                                <rect key="frame" x="127" y="212" width="160" height="125"/>
+                                <rect key="frame" x="127" y="256" width="160" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="E0l-Y5-pEQ"/>
                                     <constraint firstAttribute="width" constant="160" id="THq-oV-NEC"/>
@@ -45,9 +45,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="plY-BS-DN5"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bPd-rG-Y8g"/>
                     <connections>
                         <outlet property="animationPin" destination="690-I1-oFA" id="Hne-qq-kgw"/>
                         <outlet property="animationTitle" destination="mGw-gq-4Qp" id="5X6-gE-kpE"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toViewController" id="xWc-b9-gIO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSk-KL-NPn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -131,7 +133,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="E8J-Di-VKz"/>
+                        <segue destination="B08-JV-jU2" kind="relationship" relationship="rootViewController" id="MOL-jU-ur9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2Y-Lq-9Zd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
