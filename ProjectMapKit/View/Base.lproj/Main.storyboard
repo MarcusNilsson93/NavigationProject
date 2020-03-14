@@ -63,26 +63,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkc-w6-vxF">
+                                <rect key="frame" x="184" y="832" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="coreDatabtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YTa-fW-UkU"/>
+                                    <segue destination="IEv-lP-2e3" kind="show" id="uI2-ix-OXl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="sID-Zy-Wyd">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="h0n-QI-9t7">
-                                <connections>
-                                    <action selector="searchBtn:" destination="BYZ-38-t0r" id="RD3-K8-NIo"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="coreData" image="star" id="ucb-B5-6Ro">
-                                <connections>
-                                    <action selector="recent:" destination="BYZ-38-t0r" id="68M-Qr-ZYS"/>
-                                    <segue destination="IEv-lP-2e3" kind="show" id="A61-9L-yrF"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="h0n-QI-9t7">
+                            <connections>
+                                <action selector="searchBtn:" destination="BYZ-38-t0r" id="RD3-K8-NIo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="coreData" destination="ucb-B5-6Ro" id="T08-t2-efn"/>
+                        <outlet property="coreDataButton" destination="dkc-w6-vxF" id="PxA-bP-PkP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -149,6 +152,5 @@
     <resources>
         <image name="LaunchScreenMapPin" width="29.5" height="44"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
-        <image name="star" width="31" height="28"/>
     </resources>
 </document>

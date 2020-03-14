@@ -19,10 +19,13 @@ class Alert {
         
     }
     static func errorPlacingPinAlert(vc: UIViewController){
-        showAlert(vc: vc, with: "couldn't place the pin", message: "Somting went wrong, please try again")
+        showAlert(vc: vc, with: "Couldn't place the pin", message: "Somting went wrong, please try again")
         
     }
     static func errorCalculatingRouteAlert(vc: UIViewController){
-        showAlert(vc: vc, with: "couldn't calculate the route", message: "Somting went wrong, please try again")
+        showAlert(vc: vc, with: "Couldn't calculate the route", message: "Somting went wrong, please try again")
+    }
+    static func coreDataError(vc: UIViewController){
+        showAlert(vc: vc, with: "Could not fetch the data", message: "The data could not be read, please try again")
     }
 }

@@ -19,30 +19,31 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
     var directionRoute: Route?
     var PolyLineStyle: NSExpression!
     var resultSearchController: UISearchController? = nil
-    var coreDataButton: UIButton!
+    var coreDatabtn: UIButton!
+    @IBOutlet weak var coreDataButton: UIButton!
     
-    @IBOutlet weak var coreData: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //shows NavigationBar
         self.navigationController?.isNavigationBarHidden = false
+        
         //Removes backButton to previus VC
-        self.navigationItem.setHidesBackButton(true, animated: true);
-        self.navigationItem.rightBarButtonItems?.append(coreData)
-        
-        
+    self.navigationItem.setHidesBackButton(true, animated: true)
         
         //creates a MapView
         mapView = NavigationMapView(frame: view.bounds)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.setCenter(CLLocationCoordinate2D(latitude: 59.31, longitude: 18.06), zoomLevel: 9, animated: false)
-        
         view.addSubview(mapView)
         mapView.delegate = self
         
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true, completionHandler: nil)
+        
+        //adds navigate button to coreDataTable
+        self.view.addSubview(coreDataButton)
         
         // adds longPress gesture on the map
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(_:)))
@@ -120,9 +121,14 @@ class ViewController: UIViewController, MGLMapViewDelegate,UISearchBarDelegate{
         present(searchController, animated: true, completion: nil)
 
     }
+    @IBAction func coreDatabtnPressed(_ sender: Any) {
+        //Why doestnt the btn work unless i have this empty action??
+    }
+    //func that fiers when user klick search on keyboard
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
         
+        //seve to coreData
         let searched = Searched(context: persistenceService.context)
         searched.cityName = searchBar.text
         persistenceService.saveContext()

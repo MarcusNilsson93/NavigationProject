@@ -6,13 +6,23 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController: UITableViewController {
     var lastSearchedCitys = [Searched]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        let fetchRequest: NSFetchRequest<Searched> = Searched.fetchRequest()
+        do{
+            let lastSearchedCitys = try persistenceService.context.fetch(fetchRequest)
+            self.lastSearchedCitys = lastSearchedCitys
+            self.tableView.reloadData()
+        }catch{
+            Alert.coreDataError(vc: self)
+        }
         
     }
 
