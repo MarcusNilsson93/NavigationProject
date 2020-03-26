@@ -1,9 +1,9 @@
 //
-//  Searched+CoreDataClass.swift
-//  
+//  File.swift
+//  ProjectMapKit
 //
-//  Created by Marcus Nilsson on 2020-03-13.
-//
+//  Created by Marcus Nilsson on 2020-03-26.
+//  Copyright © 2020 Marcus Nilsson. All rights reserved.
 //
 
 import Foundation
